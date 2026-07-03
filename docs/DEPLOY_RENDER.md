@@ -22,7 +22,7 @@ O arquivo `render.yaml` tambem registra a configuracao esperada do Web Service p
 ## 3. Build command
 
 ```txt
-npm install && npm run prisma:generate && npm run build
+npm install --include=dev && npm run prisma:generate && npm run build
 ```
 
 ## 4. Start command

@@ -148,7 +148,7 @@ Configuracao esperada:
 
 ```txt
 Build Command:
-npm install && npm run prisma:generate && npm run build
+npm install --include=dev && npm run prisma:generate && npm run build
 
 Start Command:
 npm run prisma:deploy && npm run prisma:seed && npm start
