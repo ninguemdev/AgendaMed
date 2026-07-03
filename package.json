@@ -2,7 +2,7 @@
   "name": "agendamed",
   "version": "0.1.0",
   "private": true,
-  "description": "AgendaMed - plataforma acadêmica de agendamento online para clínicas e profissionais autônomos.",
+  "description": "AgendaMed - plataforma academica de agendamento online para clinicas e profissionais autonomos.",
   "main": "dist/main.js",
   "scripts": {
     "dev": "tsx watch src/main.ts",
@@ -16,9 +16,6 @@
     "prisma:deploy": "prisma migrate deploy",
     "prisma:seed": "tsx prisma/seed.ts"
   },
-  "prisma": {
-    "seed": "tsx prisma/seed.ts"
-  },
   "engines": {
     "node": ">=20.0.0"
   },
@@ -31,6 +28,30 @@
     "postgresql"
   ],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/client": "^6.19.3",
+    "dotenv": "^17.4.2",
+    "ejs": "^6.0.1",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.5.2",
+    "helmet": "^8.2.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/ejs": "^3.1.5",
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.1.0",
+    "@types/supertest": "^7.2.0",
+    "eslint": "^10.6.0",
+    "globals": "^17.7.0",
+    "prettier": "^3.9.4",
+    "prisma": "^6.19.3",
+    "supertest": "^7.2.2",
+    "tsx": "^4.22.5",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.62.1",
+    "vitest": "^4.1.9"
+  }
 }
-
