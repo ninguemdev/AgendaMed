@@ -11,7 +11,7 @@
 | Informar banco de dados usado | PostgreSQL | View de tecnologias, prisma/schema.prisma |
 | Informar firewall usado | Cloudflare WAF planejado/definido para dominio proprio | View de tecnologias, docs/FIREWALL.md |
 | Informar nuvem usada | Render Cloud | View de tecnologias, docs/INFRAESTRUTURA.md |
-| Informar nome da equipe | Placeholders editaveis Integrante 1 a 4 | docs/EQUIPE.md, rota `/tecnologias` |
+| Informar nome da equipe | Integrante informado: Dionel Sebastião, RA:2567830 | docs/EQUIPE.md, rota `/tecnologias` |
 | Informar tecnologias utilizadas | Lista de tecnologias documentada e exibida no site | README, rota `/tecnologias` |
 | Explicar como foi feito | Texto academico descreve arquitetura, banco e deploy | rota `/tecnologias`, docs/ARQUITETURA.md |
 | Usar Git e GitHub | Repositorio Git local e instrucoes para GitHub | README, docs/PLANO_DE_COMMITS.md |
@@ -20,4 +20,3 @@
 | Usar Clean Architecture | Camadas domain, application, infrastructure, presentation e shared | src/, docs/ARQUITETURA.md |
 | Criar setup e documentacao antes da implementacao | Etapas iniciais do historico criam configuracao e docs antes das funcionalidades | Historico Git |
 | Ser simples, funcional, publicavel e defendivel | Escopo sem autenticacao complexa, com rotas essenciais e documentacao | README, docs/ |
-

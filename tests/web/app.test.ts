@@ -104,7 +104,7 @@ describe('AgendaMed web app', () => {
     expect(response.text).toContain('Servidor usado: Render Web Service');
     expect(response.text).toContain('Cloudflare WAF');
     expect(response.text).toContain('Clean Architecture');
-    expect(response.text).toContain('Integrante 1');
+    expect(response.text).toContain('Dionel Sebastião, RA:2567830');
   });
 
   it('responde health check com status do banco', async () => {
@@ -120,4 +120,3 @@ describe('AgendaMed web app', () => {
     expect(response.body.timestamp).toBeDefined();
   });
 });
-

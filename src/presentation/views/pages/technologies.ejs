@@ -18,7 +18,9 @@
           <% teamMembers.forEach((member) => { %>
             <article class="team-member">
               <strong><%= member.name %></strong>
-              <span><%= member.role %></span>
+              <% if (member.role) { %>
+                <span><%= member.role %></span>
+              <% } %>
             </article>
           <% }) %>
         </div>

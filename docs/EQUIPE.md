@@ -6,10 +6,6 @@ Nome da equipe: **AgendaMed Infra**
 
 | Integrante | Papel no projeto |
 | --- | --- |
-| Integrante 1 | Planejamento, requisitos e documentacao |
-| Integrante 2 | Arquitetura, dominio e casos de uso |
-| Integrante 3 | Banco de dados, Prisma e deploy |
-| Integrante 4 | Interface web, testes e apresentacao |
+| Dionel Sebastião, RA:2567830 | Projeto academico AgendaMed |
 
-Os nomes acima sao placeholders editaveis para a equipe da faculdade. Nao foram usados nomes reais para evitar inventar integrantes.
-
+O projeto foi identificado com o integrante informado pelo aluno.
