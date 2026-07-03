@@ -24,6 +24,37 @@
         </div>
       </section>
 
+      <section class="section-block">
+        <h2>Infraestrutura exigida</h2>
+        <div class="table-wrapper compact-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Item exigido</th>
+                <th>Solucao usada</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% infrastructureRequirements.forEach((requirement) => { %>
+                <tr>
+                  <td><%= requirement.item %></td>
+                  <td><%= requirement.solution %></td>
+                </tr>
+              <% }) %>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <h2>Declaracao da infraestrutura</h2>
+        <div class="statement-list">
+          <% infrastructureStatements.forEach((statement) => { %>
+            <p><%= statement %></p>
+          <% }) %>
+        </div>
+      </section>
+
       <section class="content-grid">
         <article>
           <h2>Tecnologias utilizadas</h2>
@@ -37,13 +68,19 @@
         <article>
           <h2>Como foi feito</h2>
           <p>
-            A aplicacao foi desenvolvida com TypeScript, Node.js, Express.js, EJS, PostgreSQL,
-            Prisma e Zod. O site possui rotas para servicos, agendamento, listagem administrativa,
-            health check e informacoes da infraestrutura.
+            A aplicacao foi desenvolvida com Clean Architecture, separando regras de negocio,
+            casos de uso, infraestrutura, banco de dados e camada web. O banco armazena pacientes,
+            servicos e agendamentos. O site foi publicado na nuvem para permitir acesso publico por
+            meio de um link online.
           </p>
           <p>
-            A arquitetura separa dominio, casos de uso, infraestrutura, banco de dados e camada web.
             O link configurado para exibicao publica e <strong><%= publicSiteUrl %></strong>.
+          </p>
+          <h2>Resumo da Clean Architecture</h2>
+          <p>
+            A camada Domain contem entidades e contratos. A camada Application contem os casos de uso.
+            A camada Infrastructure contem Prisma, PostgreSQL, Express, rotas e controllers. A camada
+            Presentation contem as views EJS e os arquivos publicos do site.
           </p>
         </article>
       </section>
@@ -53,4 +90,3 @@
   <%- include('../partials/footer') %>
 </body>
 </html>
-

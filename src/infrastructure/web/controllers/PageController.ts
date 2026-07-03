@@ -2,7 +2,13 @@ import type { NextFunction, Request, Response } from 'express';
 import { AppError } from '../../../shared/errors/AppError';
 import { ValidationError } from '../../../shared/errors/ValidationError';
 import { env } from '../../../shared/config/env';
-import { teamMembers, teamName, technologies } from '../../../shared/config/projectInfo';
+import {
+  infrastructureRequirements,
+  infrastructureStatements,
+  teamMembers,
+  teamName,
+  technologies,
+} from '../../../shared/config/projectInfo';
 import type { ApplicationContainer } from '../app';
 
 interface ScheduleFormData {
@@ -156,8 +162,9 @@ export class PageController {
       teamName,
       teamMembers,
       technologies,
+      infrastructureRequirements,
+      infrastructureStatements,
       publicSiteUrl: env.PUBLIC_SITE_URL,
     });
   };
 }
-

@@ -305,6 +305,10 @@ h3 {
   grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
 }
 
+.section-block {
+  margin: 28px 0;
+}
+
 .card {
   padding: 22px;
 }
@@ -415,6 +419,10 @@ table {
   min-width: 760px;
 }
 
+.compact-table table {
+  min-width: 560px;
+}
+
 th,
 td {
   padding: 14px 16px;
@@ -439,6 +447,20 @@ tr:last-child td {
 
 .team-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.statement-list {
+  display: grid;
+  gap: 12px;
+}
+
+.statement-list p {
+  margin: 0;
+  padding: 14px 16px;
+  border-left: 4px solid var(--green-600);
+  border-radius: 8px;
+  background: white;
+  color: var(--ink);
 }
 
 .team-member {
@@ -559,4 +581,3 @@ tr:last-child td {
     font-size: 0.84rem;
   }
 }
-
