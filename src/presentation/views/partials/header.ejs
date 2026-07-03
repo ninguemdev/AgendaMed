@@ -1,0 +1,16 @@
+<header class="site-header">
+  <div class="container header-content">
+    <a class="brand" href="/" aria-label="AgendaMed inicio">
+      <span class="brand-mark">AM</span>
+      <span>AgendaMed</span>
+    </a>
+    <nav class="main-nav" aria-label="Navegacao principal">
+      <a class="<%= currentPath === '/' ? 'active' : '' %>" href="/">Inicio</a>
+      <a class="<%= currentPath === '/servicos' ? 'active' : '' %>" href="/servicos">Servicos</a>
+      <a class="<%= currentPath === '/agendar' ? 'active' : '' %>" href="/agendar">Agendar</a>
+      <a class="<%= currentPath === '/agendamentos' ? 'active' : '' %>" href="/agendamentos">Agendamentos</a>
+      <a class="<%= currentPath === '/tecnologias' ? 'active' : '' %>" href="/tecnologias">Equipe e Tecnologias</a>
+    </nav>
+  </div>
+</header>
+

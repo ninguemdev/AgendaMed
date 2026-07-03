@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<%- include('../partials/head', { title }) %>
+<body>
+  <%- include('../partials/header') %>
+
+  <main class="section">
+    <div class="container narrow">
+      <div class="section-heading">
+        <p class="eyebrow">Agendamento</p>
+        <h1>Agendar consulta</h1>
+        <p>Preencha os dados para registrar um agendamento no banco PostgreSQL.</p>
+      </div>
+
+      <% if (success) { %>
+        <div class="alert success">Agendamento criado com sucesso.</div>
+      <% } %>
+
+      <% if (errors.length > 0) { %>
+        <div class="alert error">
+          <strong>Revise o formulario:</strong>
+          <ul>
+            <% errors.forEach((error) => { %>
+              <li><%= error %></li>
+            <% }) %>
+          </ul>
+        </div>
+      <% } %>
+
+      <form class="form-panel" action="/agendar" method="post">
+        <div class="field-grid">
+          <label>
+            <span>Nome</span>
+            <input type="text" name="name" value="<%= form.name %>" required />
+          </label>
+
+          <label>
+            <span>E-mail</span>
+            <input type="email" name="email" value="<%= form.email %>" required />
+          </label>
+
+          <label>
+            <span>Telefone</span>
+            <input type="tel" name="phone" value="<%= form.phone %>" required />
+          </label>
+
+          <label>
+            <span>Servico</span>
+            <select name="serviceId" required>
+              <option value="">Selecione</option>
+              <% services.forEach((service) => { %>
+                <option value="<%= service.id %>" <%= form.serviceId === service.id ? 'selected' : '' %>>
+                  <%= service.name %>
+                </option>
+              <% }) %>
+            </select>
+          </label>
+
+          <label>
+            <span>Data</span>
+            <input type="date" name="appointmentDate" value="<%= form.appointmentDate %>" min="<%= today %>" required />
+          </label>
+
+          <label>
+            <span>Horario</span>
+            <input type="time" name="appointmentTime" value="<%= form.appointmentTime %>" required />
+          </label>
+        </div>
+
+        <label>
+          <span>Observacoes</span>
+          <textarea name="notes" rows="4"><%= form.notes %></textarea>
+        </label>
+
+        <button class="button primary full" type="submit">Salvar agendamento</button>
+      </form>
+    </div>
+  </main>
+
+  <%- include('../partials/footer') %>
+</body>
+</html>
+

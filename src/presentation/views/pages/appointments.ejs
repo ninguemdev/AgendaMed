@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<%- include('../partials/head', { title }) %>
+<body>
+  <%- include('../partials/header') %>
+
+  <main class="section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Area administrativa simulada</p>
+        <h1>Agendamentos cadastrados</h1>
+        <p>Dados carregados do PostgreSQL com relacionamento entre paciente e servico.</p>
+      </div>
+
+      <% if (appointments.length === 0) { %>
+        <div class="empty-state">
+          <p>Nenhum agendamento cadastrado ainda.</p>
+          <a class="button primary" href="/agendar">Criar primeiro agendamento</a>
+        </div>
+      <% } else { %>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Horario</th>
+                <th>Paciente</th>
+                <th>Contato</th>
+                <th>Servico</th>
+                <th>Observacoes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% appointments.forEach((appointment) => { %>
+                <tr>
+                  <td><%= formatDate(appointment.appointmentDate) %></td>
+                  <td><%= appointment.appointmentTime %></td>
+                  <td><%= appointment.patient ? appointment.patient.name : appointment.patientId %></td>
+                  <td>
+                    <% if (appointment.patient) { %>
+                      <%= appointment.patient.email %><br />
+                      <span class="muted"><%= appointment.patient.phone %></span>
+                    <% } else { %>
+                      <span class="muted">Paciente nao carregado</span>
+                    <% } %>
+                  </td>
+                  <td><%= appointment.service ? appointment.service.name : appointment.serviceId %></td>
+                  <td><%= appointment.notes || '-' %></td>
+                </tr>
+              <% }) %>
+            </tbody>
+          </table>
+        </div>
+      <% } %>
+    </div>
+  </main>
+
+  <%- include('../partials/footer') %>
+</body>
+</html>
+

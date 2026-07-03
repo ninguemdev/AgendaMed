@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<%- include('../partials/head', { title }) %>
+<body>
+  <%- include('../partials/header') %>
+
+  <main class="section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Trabalho academico</p>
+        <h1>Equipe e Tecnologias</h1>
+        <p>Resumo da equipe, stack tecnica e infraestrutura definida para a AgendaMed.</p>
+      </div>
+
+      <section class="info-band">
+        <h2>Equipe: <%= teamName %></h2>
+        <div class="team-grid">
+          <% teamMembers.forEach((member) => { %>
+            <article class="team-member">
+              <strong><%= member.name %></strong>
+              <span><%= member.role %></span>
+            </article>
+          <% }) %>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <article>
+          <h2>Tecnologias utilizadas</h2>
+          <ul class="tag-list">
+            <% technologies.forEach((technology) => { %>
+              <li><%= technology %></li>
+            <% }) %>
+          </ul>
+        </article>
+
+        <article>
+          <h2>Como foi feito</h2>
+          <p>
+            A aplicacao foi desenvolvida com TypeScript, Node.js, Express.js, EJS, PostgreSQL,
+            Prisma e Zod. O site possui rotas para servicos, agendamento, listagem administrativa,
+            health check e informacoes da infraestrutura.
+          </p>
+          <p>
+            A arquitetura separa dominio, casos de uso, infraestrutura, banco de dados e camada web.
+            O link configurado para exibicao publica e <strong><%= publicSiteUrl %></strong>.
+          </p>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <%- include('../partials/footer') %>
+</body>
+</html>
+

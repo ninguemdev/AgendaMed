@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<%- include('../partials/head', { title }) %>
+<body>
+  <%- include('../partials/header') %>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Startup ficticia de saude digital</p>
+          <h1>AgendaMed</h1>
+          <p class="hero-text">
+            Uma plataforma simples para clinicas e profissionais autonomos organizarem servicos,
+            pacientes e agendamentos em um site publicado na nuvem.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="/agendar">Agendar consulta</a>
+            <a class="button secondary" href="/servicos">Ver servicos</a>
+          </div>
+        </div>
+
+        <div class="hero-panel" aria-label="Resumo visual de agenda medica">
+          <div class="panel-header">
+            <span>Agenda de hoje</span>
+            <strong>Online</strong>
+          </div>
+          <div class="appointment-preview">
+            <span class="time">09:00</span>
+            <div>
+              <strong>Consulta clinica geral</strong>
+              <p>Paciente confirmado</p>
+            </div>
+          </div>
+          <div class="appointment-preview accent">
+            <span class="time">10:30</span>
+            <div>
+              <strong>Teleconsulta</strong>
+              <p>Link enviado por e-mail</p>
+            </div>
+          </div>
+          <div class="metric-row">
+            <div>
+              <strong>4</strong>
+              <span>servicos</span>
+            </div>
+            <div>
+              <strong>24h</strong>
+              <span>acesso</span>
+            </div>
+            <div>
+              <strong>SQL</strong>
+              <span>PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Proposta</p>
+          <h2>Agendamento online com foco em simplicidade</h2>
+        </div>
+
+        <div class="feature-grid">
+          <article class="card">
+            <h3>Servicos cadastrados</h3>
+            <p>Os servicos sao carregados do PostgreSQL e exibidos em uma pagina publica.</p>
+          </article>
+          <article class="card">
+            <h3>Formulario funcional</h3>
+            <p>O paciente informa seus dados, escolhe um servico, data e horario para agendar.</p>
+          </article>
+          <article class="card">
+            <h3>Infraestrutura documentada</h3>
+            <p>A pagina de equipe explica servidor, DNS, banco, firewall, nuvem e arquitetura.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <%- include('../partials/footer') %>
+</body>
+</html>
+

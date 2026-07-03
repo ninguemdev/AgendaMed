@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<%- include('../partials/head', { title }) %>
+<body>
+  <%- include('../partials/header') %>
+
+  <main class="section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Servicos</p>
+        <h1>Servicos disponiveis</h1>
+        <p>Lista carregada diretamente do banco de dados PostgreSQL.</p>
+      </div>
+
+      <% if (services.length === 0) { %>
+        <div class="empty-state">
+          <p>Nenhum servico cadastrado ainda.</p>
+        </div>
+      <% } else { %>
+        <div class="service-grid">
+          <% services.forEach((service) => { %>
+            <article class="card service-card">
+              <div>
+                <h2><%= service.name %></h2>
+                <p><%= service.description %></p>
+              </div>
+              <div class="service-meta">
+                <span><%= service.durationMinutes %> min</span>
+                <strong><%= formatCurrency(service.priceInCents) %></strong>
+              </div>
+            </article>
+          <% }) %>
+        </div>
+      <% } %>
+    </div>
+  </main>
+
+  <%- include('../partials/footer') %>
+</body>
+</html>
+
