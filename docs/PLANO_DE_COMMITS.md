@@ -10,8 +10,7 @@ O projeto seguira commits pequenos e consistentes, usando Conventional Commits.
 6. `feat: cria interface web da agendamed`
 7. `feat: adiciona pagina de equipe e tecnologias`
 8. `test: adiciona cobertura dos fluxos principais`
-9. `docs: atualiza instrucoes de repositorio e deploy`, se necessario
-10. `chore: prepara deploy em producao`
+9. `chore: prepara deploy em producao`
 
 Regras:
 
@@ -20,4 +19,3 @@ Regras:
 - Nao commitar `.env`.
 - Nao commitar segredos.
 - Rodar `npm run lint`, `npm run test` e `npm run build` antes dos commits finais.
-

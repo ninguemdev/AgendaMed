@@ -12,6 +12,16 @@ Placeholder ate o deploy final:
 https://SEU-LINK-DO-RENDER.onrender.com
 ```
 
+## Repositorio GitHub
+
+Repositorio remoto usado neste ambiente:
+
+```txt
+https://github.com/ninguemdev/AgendaMed
+```
+
+O GitHub CLI nao estava disponivel neste ambiente para criar automaticamente o repositorio com o nome `agendamed-infra-faculdade`. Se a entrega exigir exatamente esse nome, crie ou renomeie o repositorio no GitHub e atualize o remoto local.
+
 ## Requisitos do trabalho
 
 - Site online funcionando.
@@ -192,5 +202,12 @@ Se o repositorio ja existir:
 
 ```bash
 git remote add origin URL_DO_REPOSITORIO
+git push -u origin main
+```
+
+Se o remoto atual precisar ser trocado pelo repositorio da entrega:
+
+```bash
+git remote set-url origin https://github.com/SEU_USUARIO/agendamed-infra-faculdade.git
 git push -u origin main
 ```

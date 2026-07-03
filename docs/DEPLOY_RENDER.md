@@ -17,6 +17,8 @@ Alternativa: usar Supabase PostgreSQL e copiar a connection string.
 3. Selecione o branch `main`.
 4. Configure Node.js como ambiente.
 
+O arquivo `render.yaml` tambem registra a configuracao esperada do Web Service para facilitar a revisao.
+
 ## 3. Build command
 
 ```txt
@@ -68,3 +70,17 @@ https://agendamed-infra-faculdade.onrender.com
 
 Atualize o `README.md` e a pagina `/tecnologias` com o link real quando o deploy estiver concluido.
 
+## 9. Repositorio
+
+O remoto usado neste ambiente foi:
+
+```txt
+https://github.com/ninguemdev/AgendaMed
+```
+
+Se a entrega exigir o nome `agendamed-infra-faculdade`, crie ou renomeie o repositorio no GitHub e ajuste o remoto:
+
+```bash
+git remote set-url origin https://github.com/SEU_USUARIO/agendamed-infra-faculdade.git
+git push -u origin main
+```
