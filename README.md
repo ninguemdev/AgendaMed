@@ -9,7 +9,7 @@ O entregavel final do trabalho e um site online funcionando, com uma pagina obri
 Placeholder ate o deploy final:
 
 ```txt
-https://SEU-LINK-DO-RENDER.onrender.com
+https://agendamed-infra-faculdade.onrender.com/
 ```
 
 ## Repositorio GitHub
